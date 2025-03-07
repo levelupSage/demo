@@ -20,8 +20,8 @@ RUN rm -rf /usr/local/tomcat/webapps/ROOT
 # Copy the built WAR file to Tomcat's webapps directory
 COPY --from=build /app/target/24_Rest_App01.war /usr/local/tomcat/webapps/ROOT.war
 
-# Expose port 8080
-EXPOSE 8080
+# Expose port 8085
+EXPOSE 8085
 
 # Start Tomcat server
 CMD ["catalina.sh", "run"]
